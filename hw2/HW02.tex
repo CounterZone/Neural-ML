@@ -1,0 +1,290 @@
+\documentclass[epsfig]{article}
+\usepackage{epsfig}
+\usepackage{amsmath}
+%\usepackage{mfpic}
+
+
+\textwidth 6.7in
+\oddsidemargin -0.1in
+\textheight 8.50in
+\topmargin -0.55in
+\renewcommand{\textfraction}{0.25}
+\renewcommand{\floatpagefraction}{0.7}
+\markboth{}{\sl E. Mer\'enyi \hfil COMP / ELEC / STAT 502 \hfil Homework 2 }
+\pagestyle{myheadings}
+
+\def\bpar{\vskip26pt}
+\def\npar{\vskip13pt}
+\def\spar{\vskip10pt}
+
+\begin{document}
+
+
+\parindent=0pt
+
+
+\null\bpar
+\centerline{\bf Homework 2}
+\npar
+\begin{centering}{Total possible score: 100 points, 45 points = 100\%\\
+Problems 1, 2, and 3 will be graded fully.\\
+Problems 4,5,6,7,8 are for general background refresher. They will receive bonus points:  \\
+50\% of the respective maximum score if full effort is shown but solution is incorrect; \\
+100\% of the score if correct. Bonus points will count toward the overall sum of HW points.\\}
+\end{centering}
+\npar
+\centerline{\sl  LaTeX users: I posted the .tex source of this homework, 
+to save you some typing.}
+
+
+\bpar
+{\bf Problem 1. (13 points total)}
+\spar
+{\bf 1/a} (4 points)
+
+If $f(x)$ is the logistic (sigmoid) function 
+\begin{equation}
+f(x) = {1\over 1 + e^{-ax}}
+\end{equation}
+where $a$ is the slope parameter, show that 
+\begin{equation}
+{df(x)\over {dx}} = a\cdot f(x)\lbrack 1 - f(x)\rbrack.
+\end{equation}
+
+\npar
+{\bf 1/b} (4 points)
+
+Calculate the derivative of the hyperbolic tangent function 
+\begin{equation}
+f(z) = {e^{bz} - e^{-bz}\over e^{bz} + e^{-bz}}
+\end{equation}
+ where $b$ is the slope parameter. Express the derivative as a function of $f(z)$ 
+ (similarly as was done for the sigmoid in 1/a) for computational convenience and efficiency.
+
+(The sigmoid and hyperbolic tangent functions are often used assuming $a=1$ and $b=1$, respectively. Equations 1 and 2 show more general forms.)
+
+\npar
+{\sl Points 1/a and 1/b show one of the nice properties that makes the sigmoid and the hyperbolic tangent 
+functions suitable for transfer function in an ANN: their derivatives are easy to compute, without 
+performing actual derivation.}
+
+\centerline{\underline{\makebox[15cm][c]{I'm the answer}}}
+
+
+\begin{equation}
+	{df(z)\over {dz}} ={b(e^{bz}+e^{-bz})^2-b(e^{bz}- e^{-bz})^2\over{(e^{bz} + e^{-bz})^2}}=b(1-f(z)^2)
+\end{equation}
+
+\centerline{\underline{\makebox[15cm][c]{}}}
+\npar\npar
+{\bf 1/c} (5 points)
+
+A Processing Element (PE) has a logistic transfer function with slope parameter $a$. Assume that ${\bf x} = (x_1,x_2,\ldots ,x_n)$ is the input vector to the PE. For convenience we want to absorb the slope parameter in the inputs so we can use 
+
+\begin{equation}
+f(x) = {1\over 1 + e^{-x}} \quad\text{instead of }\quad f(x) = {1\over 1 + e^{-ax}} .
+\end{equation}
+\npar
+How should we transform the inputs to achieve this?
+
+
+\npar\bpar
+{\it For Problems 2 and 3 you can write your answers on this assignment page as indicated.}
+\spar
+{\bf Problem 2. (12 points total)}
+\spar
+A PE receives inputs from four other PEs. Let us denote the four PEs sending signal by $^{\mit 1}PE_i, i=1,\ldots ,4$ (PEs \#1, 2, 3, and 4 in layer one) and denote the receiving PE by $^{\mit 2}PE_j$ (the $jth$ PE in layer two). The activation levels (outputs) $^{\mit1}y_i$ of $^{\mit1}PE_i$ are 10, -20, 4 and -2, respectively, for $ i=1,\ldots ,4$. The weights $^2w_{ji}$ of $^{\mit2}PE_j$ (connecting $^{\mit2}PE_j$ to $^{\mit1}PE_i$) are $^2w_{j1}=0.8,  ^2w_{j2}=0.2,  ^2w_{j3}=-1.0,  ^2w_{j4}=-0.9$. Calculate the output (activation level) $^{\mit 2}y_j$  of $^{\mit2}PE_j$ for the cases below. Give your answer as a single number, in-line.
+
+\spar
+i) (3 points) $^{\mit2}PE_j$ is linear, i.e. the transfer function of the PE is linear. Use f(I) = I.
+\spar
+1.8
+\spar
+ii) (4 points) The transfer function is the hardlimit function.  \spar
+
+\spar
+1
+\spar
+iii) (5 points) The transfer function is the sigmoid with slope parameter $a=1$ .
+\spar
+0.858149
+\spar
+\bpar\npar
+{\bf Problem 3. (20 points)}
+\spar
+Which of the following functions qualify as a cumulative probability distribution function? Write Yes / No in-line after each formula.
+
+\npar
+7/a) (5 points)
+\begin{equation}
+f(x) = {1 \over 1 + e^{-ax}} \quad Yes \quad if\quad  a>0
+\end{equation}
+ 
+\npar
+7/b) (5 points)
+\begin{equation}
+f(x) = {x \over \sqrt{1 + x^2}}  \quad No
+\end{equation}
+
+\npar 
+7/c) (5 points)
+
+\begin{equation}
+f(x) = {1 - e^{-x} \over 1 + e^x}    \quad No
+\end{equation}
+
+\npar 
+7/d) (5 points)
+\begin{equation}
+f(x) = {1 \over \sqrt{2\pi}} \int_{-\infty}^x {e^{-{u^2 \over 2}}} du  \quad Yes
+\end{equation}
+
+
+
+
+
+
+\bpar
+{\bf Problem 4. (15 points total)}
+\spar
+In Colin Fyfe's Chapter 2, pages 28--29, it is shown that the distribution with the greatest differential entropy for a given variance is the Gaussian. On page 29 the values of the Lagrange multipliers $\lambda_1$ and $\lambda_2$ are given without proof. Can you show how to derive these values from the preceding two integral equations on the top of page 29? 
+\spar
+{\sl Note: 
+
+According to my calculation there seems to be a slight error in the formula of $\lambda_1$: it should be equal to $1-0.5*log(2\pi\sigma^2)$. You can check this by substituting back to f(x) in (2.11), which should yield the Gaussian.}
+\spar\centerline{\underline{\makebox[15cm][c]{I'm the answer}}}
+Now, we have
+\begin{equation}
+\int_{-\infty}^\infty {exp(-1+\lambda_1+\lambda_2(x-\mu)^2)} dx=1=e^{\lambda_1-1}\int_{-\infty}^\infty {e^{\lambda_2(x-\mu)^2}}dx
+\end{equation}
+
+\begin{equation}
+\int_{-\infty}^\infty {(x-\mu)^2 exp(-1+\lambda_1+\lambda_2(x-\mu)^2)} dx=\sigma^2=e^{\lambda_1-1}\int_{-\infty}^\infty {(x-\mu)^2e^{\lambda_2(x-\mu)^2}}dx
+\end{equation}
+Integrate by parts:
+\begin{equation}
+\int_{-\infty}^\infty {(x-\mu)^2e^{\lambda_2(x-\mu)^2}}dx=\int_{-\infty}^\infty {{1\over{2\lambda_2}}(x-\mu)e^{\lambda_2(x-\mu)^2}}dx-\int_{-\infty}^\infty {{1\over{2\lambda_2}}e^{\lambda_2(x-\mu)^2}}dx
+\end{equation}
+Easy to know the first term of (12) is 0. So (11) could be transformed to
+\begin{equation}
+-{1\over{2\lambda_2}}e^{\lambda_1-1}\int_{-\infty}^\infty {e^{\lambda_2(x-\mu)^2}}dx= \sigma^2
+\end{equation}
+Then devide (13) by (10), we get:
+\begin{gather}
+-{1\over{2\lambda_2}}=\sigma^2\\
+\lambda_2=-{1\over{2\sigma^2}}
+\end{gather}
+Since the Gaussian integral
+
+\begin{equation}
+\int_{-\infty}^\infty {e^{-x^2}} dx=\sqrt{\pi}
+\end{equation}
+Insert (15) into (10), we can calculate
+
+\begin{gather}
+e^{\lambda_1-1}\int_{-\infty}^\infty {e^{-{(x-\mu)^2\over{2\sigma^2}}}}dx=1=\sqrt{2}\sigma e^{\lambda_1-1}\int_{-\infty}^\infty {e^{-{(x-\mu)^2\over{2\sigma^2}}}}d{x-\mu\over{\sqrt{2}\sigma}}=\sqrt{2}\sigma e^{\lambda_1-1}\sqrt{\pi}\\
+e^{\lambda_1-1}={1\over{\sqrt{2\pi}\sigma}}\\
+\lambda_1=1+log({1\over{\sqrt{2\pi}\sigma}})=1-0.5*log(2\pi\sigma^2)
+\end{gather}
+Q.E.D.\spar
+\centerline{\underline{\makebox[15cm][c]{}}}
+
+\bpar
+{\bf Problem 5. (10 points)}
+\spar
+Show how to get (2.13) on page 29 of Colin Fyfe's text. That is, calculate the differential entropy of the continuous random variable $X$ whose probability density function is a Gaussian with mean $\mu$ and variance $\sigma^2$, as in Problem 3. 
+
+{\sl(Note: In the LHS of definition (2.8) $X$ should stand instead of $x$. Likewise in (2.13). Further similar inconsistent notations in (2.14). Correct these typos in your copies.)}\spar
+\centerline{\underline{\makebox[15cm][c]{I'm the answer}}}
+
+\begin{align*}
+h(X)=-\int_{-\infty}^\infty f(x)logf(x) dx=\int_{-\infty}^\infty f(x)(-log({1\over{\sqrt{2\pi}\sigma}})-{(x-\mu)^2\over{2\sigma^2}})dx\\
+=-log({1\over{\sqrt{2\pi}\sigma}})\int_{-\infty}^\infty f(x)dx-\int_{-\infty}^\infty     {(x-\mu)^2\over{2\sigma^2}}{1\over{\sqrt{2\pi}\sigma}}e^{-{(x-\mu)^2\over{2\sigma^2}}}dx
+\end{align*}
+Since $\int_{-\infty}^\infty f(x)dx=1$ ,set $t={x-\mu\over{\sqrt{2}\sigma}}$, now we have
+\begin{align*}
+h(X)=-log({1\over{\sqrt{2\pi}\sigma}})-\int_{-\infty}^\infty     t^2{1\over{\sqrt{\pi}}}e^{-t^2}dt\\
+=-log({1\over{\sqrt{2\pi}\sigma}})-{1\over{\sqrt{\pi}}}(\int_{-\infty}^\infty {1\over 2}te^{-t^2}dt-\int_{-\infty}^\infty {1\over 2}e^{-t^2}dt)\\
+=-log({1\over{\sqrt{2\pi}\sigma}})+{1\over 2}\\
+={1\over 2}(1+log(2\pi\sigma^2))
+\end{align*}
+
+Q.E.D.\spar
+\centerline{\underline{\makebox[15cm][c]{}}}
+\bpar
+{\bf Problem 6. (10 points total)}
+\spar
+{\bf 5/a} (3 points)
+
+Calculate the variance and the differential entropy of the uniform distribution.
+\spar
+\centerline{\underline{\makebox[15cm][c]{I'm the answer}}}
+Assume that random variable X is uniformly distributed on [a,b].
+Then the pdf of X is :
+\begin{align*}
+f(x)={1\over b-a} \quad if \quad x \quad in \quad [a,b]\\
+=0 \quad else
+\end{align*}
+Then
+
+\begin{gather}
+V(X)=E[(X-E(X))^2]=E(X^2)-E(X)^2=\int_{a}^b {x^2\over b-a}dx-(\int_{a}^b{x\over b-a}dx)^2={{1\over 3}(b^3-a^3)\over b-a}-{{1\over 4 }(b^2-a^2)^2\over (b-a)^2}={(b-a)^2\over 12}\\
+h(X)=-\int_{a}^b {1\over b-a}log({1\over b-a})dx=log(b-a)
+\end{gather}
+
+\spar
+\centerline{\underline{\makebox[15cm][c]{}}}
+\bpar
+{\bf 5/b} (7 points)
+
+Compare the differential entropies of the uniform and Gaussian distributions assuming they have the same variance. Which one is larger? Document your result.
+\spar
+\centerline{\underline{\makebox[15cm][c]{I'm the answer}}}
+\spar
+For unifrom distribution:
+\begin{gather}
+h(X)=log(b-a)=log(\sqrt{12V(X)})={1\over 2}(log(12)+log(V(X))
+\end{gather}
+For gausian distribution:
+\begin{gather}
+h(X)={1\over 2}(1+log(2\pi\sigma^2))={1\over 2}(log(e*2\pi)+log( V(X)))
+\end{gather}
+
+Obviously $e*2\pi>12$, so with same variance the Gaussian distribution has larger entropy.
+\spar
+\centerline{\underline{\makebox[15cm][c]{}}}
+%\spar
+%{\bf 5/c} (5 points)
+
+%Calculate the differential entropy of the Laplacian distribution, given by
+%\begin{equation}
+%f(x) = {\lambda \over 2} e^{-\lambda |x|}
+%\end{equation}
+
+\bpar
+{\bf Problem 7. (10 points)}
+\spar
+The support of a random variable $\xi$ is $[a,b]$. There is no other constraint. What is the maximum entropy distribution for $\xi$ (what is the probability density function that maximizes the differential entropy of $\xi$)?
+Justify your result.
+
+
+
+\bpar
+{\bf Problem 8. (10 points total)}
+\spar
+8/a (5 points)
+Show that if $\xi$ and  $\eta$ are jointly Gaussian random variables (random variables with joint 
+Gaussian probability density function), and $\xi$ and  $\eta$ are uncorrelated, i.e., $E[\xi\eta] = E[\xi]E[\eta]$ 
+then $\xi$ and $\eta$ are also statistically independent 
+(a property that is not shared by other probability distributions, in general).
+
+\npar
+8/b (5 points)
+Show that if ${\mathbf x} = (x_1, \dots , x_n)$ is a random vector (vector whose elements are random variables), and $x_i$ are statistically independent of each other, then the joint differential entropy of the $x_j$, $h({\bf x}) = h(x_1, \dots , x_n)$, is: 
+$$h({\bf x}) = h(x_1) + \dots + h(x_n)$$
+where $h(x_j)$ is the differential entropy of the random variable $x_j$, for $j=1, \dots n$ .
+
+
+\end{document}
+
+
