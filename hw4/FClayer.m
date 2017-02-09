@@ -7,16 +7,19 @@ classdef FClayer <layer
         Ffunc;
         insize;
         outsize;
+        lr;
     end
     
     methods
-        function  nlayer=FClayer(insize,outsize,Tfunc,Ffunc)
+        function  nlayer=FClayer(insize,outsize,Tfunc,Ffunc,lr)
             % constructor. Tfunc is transfer function, Ffunc is the derivative
             % of Tfunc(with respect to Tfunc)
             nlayer.insize=insize;
             nlayer.outsize=outsize;
             nlayer.Tfunc=Tfunc;
             nlayer.Ffunc=Ffunc;
+            nlayer.lr=lr;
+
         end
         function initiate(nlayer,scale)        
             %now, it only supports uniformly distributed values between -scale to scale
@@ -36,6 +39,9 @@ classdef FClayer <layer
             %return delta and dw of this layer
             delta=nlayer.weight'*(updelta.*nlayer.Ffunc(upy));
             dw=nlayer.Ffunc(upy).*updelta*downy';
+        end
+        function update(nlayer,dw)
+            nlayer.weight=nlayer.weight+dw.*nlayer.lr;
         end
     end
     
