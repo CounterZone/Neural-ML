@@ -1,9 +1,9 @@
 classdef layer<handle
-    %Layer
+    %Abstract layer class
     
     properties(Abstract=true)
         insize;
-        outsize;
+        outsize;% size of input and output vectors
     end
     
     methods(Abstract=true)

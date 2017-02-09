@@ -1,6 +1,5 @@
-classdef hw3net<handle
-    %NETWORK Summary of this class goes here
-    %   Detailed explanation goes here
+classdef hw4net<handle
+ % Network for hw4. Containing 2 FC layers.
     
     properties
         layer1;
@@ -8,7 +7,7 @@ classdef hw3net<handle
     end
     
     methods
-        function hw=hw3net(scale)
+        function hw=hw4net(scale)
             hw.layer1=FClayer(2,10,@tanh,@Ffunc);
             hw.layer1.initiate(scale);
             hw.layer2=FClayer(10,1,@tanh,@Ffunc);
@@ -20,6 +19,7 @@ classdef hw3net<handle
         y=hw.layer2.forward(y1);
         end
         function err=train(hw,X,Y,lr)
+            % should i put some comments here?
         yy1=hw.layer1.forward(X);
         yy=hw.layer2.forward(yy1);
              D=Y-yy;

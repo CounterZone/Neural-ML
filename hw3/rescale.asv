@@ -1,0 +1,7 @@
+function out = rescale(X)
+%RESCALE Summary of this function goes here
+%   Detailed explanation goes here
+out=(X-ones(size(X))*min(reshape(X,numel(X),1)))./(ones(size(X))*(max(reshape(X,numel(X),1))-min(reshape(X,numel(X),1))))
+
+end
+
