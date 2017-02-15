@@ -27,6 +27,9 @@ file=fopen('iris-test.txt');
 d=fscanf(file,'%f %f %f %f & %f %f %f',[7,Inf]);
 testx=d(1:4,:);
 testy=d(5:7,:);
-er=p4.train(trainx,trainy,0.5,0.005,10000);
+er=p4.train(trainx,trainy,0.7,0.001,3000);
 
 yy=p4.recall(testx);
+utils.Acc(yy,testy)
+
+

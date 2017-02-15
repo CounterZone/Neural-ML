@@ -74,7 +74,6 @@ classdef network<handle
            err_his=ones(1,epoch);
             for i=1:epoch
             [err_his(i),dw]=nw.S_train(X,Y,momentum,lastdw,lr);
-            err_his(i)
             lastdw=dw;
            end
         end
