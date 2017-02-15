@@ -1,4 +1,6 @@
 classdef Tanhlayer <layer
+    % Tanhlayer
+    % Give tanh of the input
     properties
         updating
     end

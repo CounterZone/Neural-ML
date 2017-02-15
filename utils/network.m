@@ -8,6 +8,7 @@ classdef network<handle
     
     methods
         function nw=network(config)
+            % construct from a config file, which contains parameters of each layer
             nw.layer={};
         c=fopen(config); 
         i=0;
@@ -16,14 +17,15 @@ classdef network<handle
            if l==-1
                break
            end
-                      i=i+1;
-
-           l=strsplit(l,',');
+           i=i+1;
+           l=regexp(l,',','split');
            if strcmp(l{1},'FClayer')
-               l=strsplit(l{2},'x');
-               
+               l=regexp(l{2},'x','split');
+             
                nw.layer{i}=FClayer(str2num(l{1}),str2num(l{2}));  %#ok<ST2NM>
                nw.layer{i}.initiate(1/sqrt(str2num(l{1})));
+               % the initiation of weight is fixed: uniform distribution,
+               % and the scale is determined by the dimensions  
            end
            if strcmp(l{1},'Tanhlayer')
                nw.layer{i}=Tanhlayer();
@@ -37,14 +39,15 @@ classdef network<handle
         end
 
         function [err,dw]=S_train(nw,X,Y,momentum,lastdw,lr)
+            % one-step training. 
             yy=cell(1,nw.nlayer+1);
             yy{1}=X;
             for i=1:nw.nlayer
                 
                 yy{i+1}=nw.layer{i}.forward(yy{i});
             end 
-            err=sqrt(mean((Y-yy{nw.nlayer+1}).^2));
-
+            err=sqrt(mean(sum((Y-yy{nw.nlayer+1}).^2,1)));
+            
             delta=cell(1,nw.nlayer+1);
             delta{1}=Y-yy{nw.nlayer+1};
             dw=cell(1,nw.nlayer);
@@ -61,6 +64,7 @@ classdef network<handle
                   nw.layer{i}.update(dw{i},lr);
                   end
              end 
+           
         end
         function err_his=train(nw,X,Y,momentum,lr,epoch)
             lastdw=cell(1,nw.nlayer);
@@ -70,11 +74,12 @@ classdef network<handle
            err_his=ones(1,epoch);
             for i=1:epoch
             [err_his(i),dw]=nw.S_train(X,Y,momentum,lastdw,lr);
+            err_his(i)
             lastdw=dw;
            end
         end
         
-        function Y=forward(nw,X)
+        function Y=recall(nw,X)
             Y=cell(1,nw.nlayer+1);
             Y{1}=X;
             for i=1:nw.nlayer
@@ -84,7 +89,7 @@ classdef network<handle
         end
         
         function err=test(nw,X,Y)
-          err=sqrt(mean((Y-nw.forward(X)).^2));
+          err=sqrt(mean(sum((Y-nw.recall(X)).^2,1)));
 
         end
     end

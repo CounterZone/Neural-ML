@@ -1,6 +1,6 @@
 classdef Biaslayer<layer
-    %BIASLAYER Summary of this class goes here
-    %   Detailed explanation goes here
+    %BIASLAYER 
+    %   Add a Bias to the input
     
     properties
         updating
