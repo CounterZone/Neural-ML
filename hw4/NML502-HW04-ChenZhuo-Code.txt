@@ -1,0 +1,251 @@
+Files
+
+----------main.m   main script of homework 4.
+----------hw4net.m   the class of the network used in homework 4.
+----------FClayer.m   the class of fully connected linear layer.
+----------layer.m     abstract class of layer.
+----------Ffunc.m    the derivative of tanh(with respect to tanh(x))
+
+
+
+-main.m
+%   HW04, Problem 2 (learn f=1/x)
+net=hw4net();
+t=0;%#steps
+errtrain=zeros(1,400);
+errtest=zeros(1,400);
+
+% generate test and train set
+t=rand([1,200])*0.9+0.1;
+trainy=2*((1./(t)-1)./9)-1;
+trainx=[t
+    ones(size(t))];
+
+t1=rand([1,100])*0.9+0.1;
+testy=2*((1./(t1)-1)./9)-1;
+testx=[t1
+    ones(size(t1))];
+% train
+for i =1:19999
+    err=net.train(trainx,trainy);
+    t=i*200;
+    if rem(i,50)==0
+     errtrain(1,floor(i/50)+1) = err;
+     
+     %Trainning accuracy:Test error
+     
+     errtest(1,floor(i/50)+1) = net.test(testx,testy);
+     %end of Tranning accuracy
+     
+    end
+    if errmax < 0  %Threshold
+        disp(t);
+        break
+    end
+end
+
+
+%Plot the performace indicator(RMSE)
+errtrain(errtrain==0) = [];
+perf=1:length(errtrain);
+figure(1);
+plot(perf(1,:),errtrain(1,:),'o-','linewidth',1.5,'MarkerEdgeColor','b','MarkerFaceColor','b','MarkerSize',5);
+axis auto
+xlabel('Steps(10000)','FontName','Times New Roman','FontSize',14);
+ylabel('RMSE','FontName','Times New Roman','FontSize',14,'Rotation',90);
+title('RMSE record of the network','FontName','Times New Roman','FontWeight','Bold','FontSize',16);
+set(gca,'FontName','Times New Roman','FontSize',14)
+%Plot the performace indicator(RMSE) end
+
+%Plot traning and testing actual vs desired output
+figure(2);
+%disp(errall);
+plot(trainx(1,:),net.forward(trainx),'*b','MarkerEdgeColor','b','MarkerFaceColor','b','MarkerSize',4);
+hold on
+plot(trainx(1,:),trainy,'*c','MarkerEdgeColor','c','MarkerFaceColor','c','MarkerSize',4);
+
+hold off
+axis auto
+legend('Training actual','Training desired','Location','best') 
+xlabel('Input','FontName','Times New Roman','FontSize',14);
+ylabel('Scaled output','FontName','Times New Roman','FontSize',14,'Rotation',90);
+title('Training Actual vs Desired Output','FontName','Times New Roman','FontWeight','Bold','FontSize',16);
+set(gca,'FontName','Times New Roman','FontSize',14)
+%Plot actual vs desired output end
+
+%Plot training vs testing accuracy
+figure(3);
+errtest(errtest==0) = [];
+perfte=1:length(errtest);
+%disp(errall);
+plot(perfte(1,:),errtest(1,:),'+-r','linewidth',1.5,'MarkerEdgeColor','r','MarkerFaceColor','r','MarkerSize',5);
+hold on
+plot(perf(1,:),errtrain(1,:),'o-b','linewidth',1.5,'MarkerEdgeColor','b','MarkerFaceColor','b','MarkerSize',5);
+hold off
+axis auto
+legend('ErrTest','ErrTrain','Location','best') 
+xlabel('Steps(10000)','FontName','Times New Roman','FontSize',14);
+ylabel('RMSE','FontName','Times New Roman','FontSize',14,'Rotation',90);
+title('Training accuracy','FontName','Times New Roman','FontWeight','Bold','FontSize',16);
+set(gca,'FontName','Times New Roman','FontSize',14)
+%Plot training vs testing accuracy end
+
+%Plot traning and testing actual vs desired output
+figure(4);
+%disp(errall);
+plot(testx(1,:),net.forward(testx),'+r','MarkerEdgeColor','r','MarkerFaceColor','r','MarkerSize',4);
+hold on
+plot(testx(1,:),testy,'+m','MarkerEdgeColor','m','MarkerFaceColor','m','MarkerSize',4);
+
+plot(trainx(1,:),net.forward(trainx),'*b','MarkerEdgeColor','b','MarkerFaceColor','b','MarkerSize',4);
+plot(trainx(1,:),trainy,'*c','MarkerEdgeColor','c','MarkerFaceColor','c','MarkerSize',4);
+
+hold off
+axis auto
+legend('Test actual','Test desired','Training actual','Training desired','Location','best') 
+xlabel('Input','FontName','Times New Roman','FontSize',14);
+ylabel('Scaled output','FontName','Times New Roman','FontSize',14,'Rotation',90);
+title('Training and Testing Actual vs desired output','FontName','Times New Roman','FontWeight','Bold','FontSize',16);
+set(gca,'FontName','Times New Roman','FontSize',14)
+%Plot actual vs desired output end
+
+
+-hw4net.m
+classdef hw4net<handle
+ % Network for hw4. Containing 2 FC layers.
+    
+    properties
+        layer1;
+        layer2;
+    end
+    
+    methods
+        function hw=hw4net()
+%Generating the network, set up #PEs, transfer functions, and learning rate.
+            % 1input + 1bias->10PE + 1bias->1output
+            hw.layer1=FClayer(2,10,@tanh,@Ffunc,0.01);
+            hw.layer1.initiate(0.1);
+            hw.layer2=FClayer(10,1,@tanh,@Ffunc,0.01);
+            hw.layer2.initiate(0.1);
+
+        end
+        function y=forward(hw,x)
+%Forwarding the value from input to output
+        y1=hw.layer1.forward(x);
+        y=hw.layer2.forward(y1);
+        end
+            
+        function err=train(hw,X,Y)
+%BP recall and error(RMSE) calculation. Based on the data, the weight can be updated
+            yy1=hw.layer1.forward(X);
+            yy=hw.layer2.forward(yy1);
+            D=Y-yy;
+            err=sqrt(mean(D.*D));
+            disp(err);
+  
+            global errmax;             
+            errmax = err;
+            [D2,dw2]=hw.layer2.BP(D,yy,yy1);
+            [D1,dw1]=hw.layer1.BP(D2,yy1,X);
+ 
+            hw.layer1.update(dw1);
+            hw.layer2.update(dw2);
+        end
+        
+        function errt=test(hw,X,Y)
+%BP recall and error calculation without updating the weight (for use of calculating testing 3rror)
+            yy1=hw.layer1.forward(X);
+            yy=hw.layer2.forward(yy1);
+            D=Y-yy;
+            errt=sqrt(mean(D.*D));
+            %disp(err);
+          end
+
+    end
+    
+end
+
+
+ 
+
+
+-FClayer.m
+classdef FClayer <layer
+    %FCLAYER : Fully connected linear layer
+    
+    properties
+        weight;
+        Tfunc;
+        Ffunc;
+        insize;
+        outsize;
+        lr;
+    end
+    
+    methods
+        function  nlayer=FClayer(insize,outsize,Tfunc,Ffunc,lr)
+            % constructor. Tfunc is transfer function, Ffunc is the derivative
+            % of Tfunc(with respect to Tfunc)
+            nlayer.insize=insize;
+            nlayer.outsize=outsize;
+            nlayer.Tfunc=Tfunc;
+            nlayer.Ffunc=Ffunc;
+            nlayer.lr=lr;
+
+        end
+        function initiate(nlayer,scale)        
+            %now, it only supports uniformly distributed values from -scale to scale
+            W=rand([nlayer.outsize,nlayer.insize]);
+            W=W-0.5*ones(size(W));
+            W=W*scale*2;
+            nlayer.weight=W; 
+        end
+        function out=forward(nlayer,input)
+            % recall
+            out=nlayer.Tfunc(nlayer.weight*input); 
+        end
+        function [delta,dw]=BP(nlayer,updelta,upy,downy)
+            %backpropagation. 
+            %updelta: delta of the next layer
+            %upy downy: output and input of this layer
+            %return delta and dw of this layer
+            delta=nlayer.weight'*(updelta.*nlayer.Ffunc(upy));
+            dw=nlayer.Ffunc(upy).*updelta*downy';
+        end
+        function update(nlayer,dw)
+            nlayer.weight=nlayer.weight+dw.*nlayer.lr;
+        end
+    end
+    
+end
+
+
+ 
+
+
+
+-layer.m
+classdef layer<handle
+    %Abstract layer class
+    
+    properties(Abstract=true)
+        insize;
+        outsize;% size of input and output vectors
+    end
+    
+    methods(Abstract=true)
+       forward;
+        
+    end
+    
+end
+
+
+
+-Ffunc.m
+function y = Ffunc( x )
+%Ffunc is the derivative of tanh(with respect to tanh(x))
+y=(1-x.*x);
+end
+ 
+

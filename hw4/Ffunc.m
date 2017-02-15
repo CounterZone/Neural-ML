@@ -1,7 +1,5 @@
 function y = Ffunc( x )
-%FFUNC Summary of this function goes here
-%   Detailed explanation goes here
-
+%Ffunc is the derivative of tanh(with respect to tanh(x))
 y=(1-x.*x);
 end
 

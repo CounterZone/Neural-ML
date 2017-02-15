@@ -3,22 +3,17 @@ classdef FClayer <layer
     
     properties
         weight;
-        Tfunc;
-        Ffunc;
         insize;
-        outsize;
-        lr;
+        outsize;% size of input and output vectors
+        updating
     end
     
     methods
-        function  nlayer=FClayer(insize,outsize,Tfunc,Ffunc,lr)
-            % constructor. Tfunc is transfer function, Ffunc is the derivative
-            % of Tfunc(with respect to Tfunc)
+        function  nlayer=FClayer(insize,outsize)
+    
             nlayer.insize=insize;
             nlayer.outsize=outsize;
-            nlayer.Tfunc=Tfunc;
-            nlayer.Ffunc=Ffunc;
-            nlayer.lr=lr;
+            nlayer.updating=true;
 
         end
         function initiate(nlayer,scale)        
@@ -30,18 +25,21 @@ classdef FClayer <layer
         end
         function out=forward(nlayer,input)
             % recall
-            out=nlayer.Tfunc(nlayer.weight*input); 
+            out=nlayer.weight*input;
         end
         function [delta,dw]=BP(nlayer,updelta,upy,downy)
             %backpropagation. 
             %updelta: delta of the next layer
             %upy downy: output and input of this layer
             %return delta and dw of this layer
-            delta=nlayer.weight'*(updelta.*nlayer.Ffunc(upy));
-            dw=nlayer.Ffunc(upy).*updelta*downy';
+            
+        
+            delta=nlayer.weight'*updelta;
+           
+            dw=updelta*downy';
         end
-        function update(nlayer,dw)
-            nlayer.weight=nlayer.weight+dw.*nlayer.lr;
+        function update(nlayer,dw,lr)
+            nlayer.weight=nlayer.weight+dw.*lr;
         end
     end
     
