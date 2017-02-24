@@ -35,6 +35,7 @@ classdef network<handle
            
         end
         nw.nlayer=i;
+        fclose(c);
         end
 
         function [err,dw]=S_train(nw,X,Y,momentum,lastdw,lr)
@@ -46,13 +47,13 @@ classdef network<handle
                 
                 yy{i+1}=nw.layer{i}.forward(yy{i});
             end 
-            err=sqrt(mean((Y-yy{nw.nlayer+1}).^2));
+            err=sqrt(mean(sum((Y-yy{nw.nlayer+1}).^2)));
 
             delta=cell(1,nw.nlayer+1);
             delta{1}=Y-yy{nw.nlayer+1};
             dw=cell(1,nw.nlayer);
              for i=1:nw.nlayer
-                 if nw.layer{i}.updating
+                 if nw.layer{nw.nlayer-i+1}.updating
                     [delta{i+1},dw{nw.nlayer-i+1}]=nw.layer{nw.nlayer-i+1}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});
                  else
                     delta{i+1}=nw.layer{nw.nlayer-i+1}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});

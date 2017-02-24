@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.20)  24 FEB 2017 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.20)  24 FEB 2017 15:46
 entering extended mode
-**./NML502-HW04-ChenZhuo.tex
-(NML502-HW04-ChenZhuo.tex
+**./hw5.tex
+(hw5.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -275,6 +275,16 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \diagbox@outsepl=\dimen148
 \diagbox@outsepr=\dimen149
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen150
+\TX@old@table=\dimen151
+\TX@old@col=\dimen152
+\TX@target=\dimen153
+\TX@delta=\dimen154
+\TX@cols=\count126
+\TX@ftn=\toks24
+)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
@@ -290,8 +300,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count126
-\U@D=\dimen150
+\babel@savecnt=\count127
+\U@D=\dimen155
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -299,45 +309,44 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count127
-\float@exts=\toks24
+\c@float@type=\count128
+\float@exts=\toks25
 \float@box=\box31
-\@float@everytoks=\toks25
+\@float@everytoks=\toks26
 \@floatcapt=\box32
 )
 
 LaTeX Warning: Unused global option(s):
     [epsfig].
 
-(NML502-HW04-ChenZhuo.aux)
-\openout1 = `NML502-HW04-ChenZhuo.aux'.
+(hw5.aux)
+\openout1 = `hw5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen151
+\scratchcounter=\count129
+\scratchdimen=\dimen156
 \scratchbox=\box33
-\nofMPsegments=\count129
-\nofMParguments=\count130
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen152
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks27
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen157
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -391,150 +400,170 @@ Package caption Info: End \AtBeginDocument code.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 90.
+(amsmath)                 on input line 62.
+
+<Acc_1.png, id=1, 578.16pt x 433.62pt>
+File: Acc_1.png Graphic file (type png)
+ <use Acc_1.png>
+Package pdftex.def Info: Acc_1.png used on input line 73.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 73--74
+ [][] 
+ []
+
+<Acc_2.png, id=2, 578.16pt x 433.62pt>
+File: Acc_2.png Graphic file (type png)
+ <use Acc_2.png>
+Package pdftex.def Info: Acc_2.png used on input line 79.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 79--80
+ [][] 
+ []
+
+<Acc_3.png, id=3, 578.16pt x 433.62pt>
+File: Acc_3.png Graphic file (type png)
+ <use Acc_3.png>
+Package pdftex.def Info: Acc_3.png used on input line 85.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 85--86
+ [][] 
+ []
+
+<RMSE_1.png, id=4, 578.16pt x 433.62pt>
+File: RMSE_1.png Graphic file (type png)
+ <use RMSE_1.png>
+Package pdftex.def Info: RMSE_1.png used on input line 95.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+<RMSE_2.png, id=5, 578.16pt x 433.62pt>
+File: RMSE_2.png Graphic file (type png)
+ <use RMSE_2.png>
+Package pdftex.def Info: RMSE_2.png used on input line 101.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 101--102
+ [][] 
+ []
+
+<RMSE_3.png, id=6, 578.16pt x 433.62pt>
+File: RMSE_3.png Graphic file (type png)
+ <use RMSE_3.png>
+Package pdftex.def Info: RMSE_3.png used on input line 107.
+(pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
+
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 107--108
+ [][] 
+ []
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-]
-<fig1.png, id=14, 562.1pt x 421.575pt>
-File: fig1.png Graphic file (type png)
- <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 105.
-(pdftex.def)             Requested size: 325.215pt x 243.90898pt.
+ <./Acc_1.png (PNG copy)> <./Acc_2.png (PNG copy)> <./Acc_3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
-<fig2.png, id=15, 562.1pt x 421.575pt>
-File: fig2.png Graphic file (type png)
- <use fig2.png>
-Package pdftex.def Info: fig2.png used on input line 113.
-(pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
- [2 <./fig1.png (PNG copy)> <./fig2.png (PNG copy)>] <fig3.png, id=19, 562.1pt 
-x 421.575pt>
-File: fig3.png Graphic file (type png)
+ []
 
-<use fig3.png>
-Package pdftex.def Info: fig3.png used on input line 141.
-(pdftex.def)             Requested size: 325.215pt x 243.90898pt.
- <fig4.png, id=20, 562.1pt x 421.575pt>
-File: fig4.png Graphic file (type png)
- <use fig4.png>
-Package pdftex.def Info: fig4.png used on input line 147.
-(pdftex.def)             Requested size: 325.215pt x 243.90898pt.
- [3 <./fig3.png (PNG copy)>] <fig5.png, id=24, 1280.785pt x 619.31375pt>
-File: fig5.png Graphic file (type png)
- <use fig5.png>
-Package pdftex.def Info: fig5.png used on input line 161.
-(pdftex.def)             Requested size: 433.62pt x 209.66614pt.
 
-[4 <./fig4.png (PNG copy)> <./fig5.png (PNG copy)>]
-<fig6.png, id=28, 1257.69875pt x 706.64pt>
-File: fig6.png Graphic file (type png)
- <use fig6.png>
-Package pdftex.def Info: fig6.png used on input line 168.
-(pdftex.def)             Requested size: 433.62pt x 243.62932pt.
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
-Underfull \hbox (badness 1642) in paragraph at lines 210--210
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
+
+ []
+
+[2 <./RMSE_1.png (PNG copy)> <./RMSE_2.png (PNG copy)> <./RMSE_3.png (PNG copy)
+>]
+Underfull \hbox (badness 1642) in paragraph at lines 205--205
 []|\OT1/cmr/m/n/10 Monitoring fre-quency of
  []
 
-[5 <./fig6.png (PNG copy)>] [6] <PE5.png, id=35, 562.1pt x 421.575pt>
-File: PE5.png Graphic file (type png)
 
-<use PE5.png>
-Package pdftex.def Info: PE5.png used on input line 249.
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
+
+ []
+
+[3] <MSEhistory_1.png, id=25, 578.16pt x 433.62pt>
+File: MSEhistory_1.png Graphic file (type png)
+ <use MSEhistory_1.png>
+Package pdftex.def Info: MSEhistory_1.png used on input line 224.
+(pdftex.def)             Requested size: 289.07999pt x 216.80946pt.
+
+<TrainvsDesire_1.png, id=26, 578.16pt x 433.62pt>
+File: TrainvsDesire_1.png Graphic file (type png)
+ <use TrainvsDesire_1.png>
+Package pdftex.def Info: TrainvsDesire_1.png used on input line 230.
+(pdftex.def)             Requested size: 289.07999pt x 216.80946pt.
+
+[4 <./MSEhistory_1.png (PNG copy)> <./TrainvsDesire_1.png (PNG copy)>]
+<errPE.png, id=30, 1105.12875pt x 607.26875pt>
+File: errPE.png Graphic file (type png)
+ <use errPE.png>
+Package pdftex.def Info: errPE.png used on input line 245.
+(pdftex.def)             Requested size: 469.75499pt x 258.1275pt.
+
+<lr_err1.png, id=31, 562.1pt x 421.575pt>
+File: lr_err1.png Graphic file (type png)
+ <use lr_err1.png>
+Package pdftex.def Info: lr_err1.png used on input line 259.
 (pdftex.def)             Requested size: 325.215pt x 243.90898pt.
- <errhistory.png, id=36, 1243.64626pt x 655.44875pt>
-File: errhistory.png Graphic file (type png)
+ [5 <./errPE.png (PNG copy)>] <lr_err2.png, id=35, 562.1pt x 421.575pt>
+File: lr_err2.png Graphic file (type png)
+ <use lr_err2.png>
+Package pdftex.def Info: lr_err2.png used on input line 269.
+(pdftex.def)             Requested size: 325.215pt x 243.90898pt.
+ [6 <./lr_err1.png (PNG copy)> <./lr_err2.png (PNG copy)>]
+<err_test1.png, id=39, 578.16pt x 433.62pt>
+File: err_test1.png Graphic file (type png)
+ <use err_test1.png>
+Package pdftex.def Info: err_test1.png used on input line 288.
+(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
 
-<use errhistory.png>
-Package pdftex.def Info: errhistory.png used on input line 256.
-(pdftex.def)             Requested size: 469.75499pt x 247.5729pt.
- [7
+<output_test1.png, id=40, 578.16pt x 433.62pt>
+File: output_test1.png Graphic file (type png)
+ <use output_test1.png>
+Package pdftex.def Info: output_test1.png used on input line 294.
+(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+ [7 <./err_test1.png (PNG copy)> <./output_test1.png (PNG copy)>]
+<err_test2.png, id=45, 578.16pt x 433.62pt>
+File: err_test2.png Graphic file (type png)
+ <use err_test2.png>
+Package pdftex.def Info: err_test2.png used on input line 314.
+(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
 
- <./PE5.png (PNG copy)>] [8 <./errhistory.png (PNG copy)>] <momentum_output.png
-, id=44, 979.66pt x 493.845pt>
-File: momentum_output.png Graphic file (type png)
-
-<use momentum_output.png>
-Package pdftex.def Info: momentum_output.png used on input line 294.
-(pdftex.def)             Requested size: 469.75499pt x 236.80176pt.
-
-<momentum_error.png, id=45, 1208.515pt x 643.40375pt>
-File: momentum_error.png Graphic file (type png)
- <use momentum_error.png>
-Package pdftex.def Info: momentum_error.png used on input line 300.
-(pdftex.def)             Requested size: 469.75499pt x 250.09196pt.
-
-[9
-
- <./momentum_output.png (PNG copy)>] [10 <./momentum_error.png (PNG copy)>]
-<best_output.png, id=52, 562.1pt x 421.575pt>
-File: best_output.png Graphic file (type png)
- <use best_output.png>
-Package pdftex.def Info: best_output.png used on input line 343.
-(pdftex.def)             Requested size: 433.62pt x 325.21199pt.
-
-<best_err.png, id=53, 562.1pt x 421.575pt>
-File: best_err.png Graphic file (type png)
- <use best_err.png>
-Package pdftex.def Info: best_err.png used on input line 348.
-(pdftex.def)             Requested size: 469.75499pt x 352.31299pt.
- [11
-
- <./best_output.png (PNG copy)>] [12 <./best_err.png (PNG copy)>]
-<p41.png, id=60, 529.22719pt x 400.49625pt>
-File: p41.png Graphic file (type png)
- <use p41.png>
-Package pdftex.def Info: p41.png used on input line 393.
-(pdftex.def)             Requested size: 289.07999pt x 218.76418pt.
-
-<p42.png, id=61, 620.3175pt x 458.46281pt>
-File: p42.png Graphic file (type png)
- <use p42.png>
-Package pdftex.def Info: p42.png used on input line 394.
-(pdftex.def)             Requested size: 289.07999pt x 213.6517pt.
- [13
-
- <./p41.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-[14 <./p42.png (PNG copy)>] [15] (NML502-HW04-ChenZhuo.aux) ) 
+<output_test2.png, id=46, 578.16pt x 433.62pt>
+File: output_test2.png Graphic file (type png)
+ <use output_test2.png>
+Package pdftex.def Info: output_test2.png used on input line 320.
+(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+ [8 <./err_test2.png (PNG copy)> <./output_test2.png (PNG copy)>] (hw5.aux) ) 
 Here is how much of TeX's memory you used:
- 4927 strings out of 493333
- 69704 string characters out of 3139194
- 167893 words of memory out of 3000000
- 8353 multiletter control sequences out of 15000+200000
+ 4982 strings out of 493333
+ 70330 string characters out of 3139194
+ 172949 words of memory out of 3000000
+ 8404 multiletter control sequences out of 15000+200000
  4755 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,42p,611b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on NML502-HW04-ChenZhuo.pdf (15 pages, 285112 bytes).
+ 44i,15n,42p,615b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on hw5.pdf (8 pages, 593505 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
