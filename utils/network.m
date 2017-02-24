@@ -8,6 +8,7 @@ classdef network<handle
     
     methods
         function nw=network(config)
+            % TODO:more parameters 
             % construct from a config file, which contains parameters of each layer
             nw.layer={};
         c=fopen(config); 
@@ -39,7 +40,8 @@ classdef network<handle
         end
 
         function [err,dw]=S_train(nw,X,Y,momentum,lastdw,lr)
-            % one-step training. 
+            % one-step BP training. 
+            % TODO:other training  methods?
             yy=cell(1,nw.nlayer+1);
             yy{1}=X;
             for i=1:nw.nlayer
@@ -66,19 +68,22 @@ classdef network<handle
              end 
            
         end
-        function err_his=train(nw,X,Y,momentum,lr,epoch)
+        function err_his=train(nw,X,Y,momentum,lr,max_epoch,epoch_size)
+            % Train the network. 
+            % TODO batch construct;epoch size;Training config????
             lastdw=cell(1,nw.nlayer);
             for i=1:nw.nlayer               
                 lastdw{i}=0;
             end 
-           err_his=ones(1,epoch);
-            for i=1:epoch
+           err_his=ones(1,max_epoch);
+            for i=1:max_epoch
             [err_his(i),dw]=nw.S_train(X,Y,momentum,lastdw,lr);
             lastdw=dw;
            end
         end
         
         function Y=recall(nw,X)
+            % nothing special
             Y=cell(1,nw.nlayer+1);
             Y{1}=X;
             for i=1:nw.nlayer
@@ -88,6 +93,7 @@ classdef network<handle
         end
         
         function err=test(nw,X,Y)
+            % TODO  maybe more kinds of errors?
           err=sqrt(mean(sum((Y-nw.recall(X)).^2,1)));
 
         end

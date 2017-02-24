@@ -38,9 +38,42 @@
 {\bf Problem 2. (20 points total)}
 \spar
 
-{\bf Problem 3. (30 points total)}
+{\bf Problem 4. (30 points total)}
 \spar
 
+\begin{table}[htbp] 
+	\center
+	\caption{Parameters of Training BP Network to Fit $f(x) = 1/x$}
+	\label{tab:NP}
+
+
+		\begin{tabular}{p{4cm} p{.05cm} p{8cm}}
+			\toprule
+			\multicolumn{3}{l}{\bf Network parameters} \\
+			\bottomrule \noalign{\smallskip}
+			Topology & & $(1 + 1_{Bias})$ --- $(10 )$ --- $1$ \\
+			Transfer function & & tanh with slope of 1 \\
+			\toprule
+			\multicolumn{3}{l}{\bf Learning parameters} \\
+			\bottomrule \noalign{\smallskip}
+			Initial weights & & drawn from U[-0.1, 0.1] \\
+			Learning rate ($\alpha$) & & 0.01 \\
+			Momentum & & none\\
+			Epoch size ($Epoch$)& &  200 \\
+			Stopping criteria & &  error ($Err_{RMSD}$) $ \le 0.05 $ OR  learn count (t) $ > 4,000,000 $\\
+			Error measure($Err_{RMSD}$) & &  Square root of the sum of $(D-y)^2$ that averaged over all training or testing samples (see formula (1) below)\\\toprule
+			\multicolumn{3}{l}{\bf Input / output data, representation, scaling} \\
+			\bottomrule \noalign{\smallskip}
+			\# training samples ($N_{tr}$)& & 200 (x values drawn randomly from U[0.1,1])\\
+			\# test samples ($N_{tst}$)& & 100 (x values drawn randomly from U[0.1,1])\\
+			Scaling of inputs & &  no scaling \\
+			Scaling of outputs & &  map [global min, global max] to [-1,1] \\
+			
+			\bottomrule \noalign{\smallskip}
+			
+		\end{tabular}
+
+\end{table}
 
 
 \end{document}

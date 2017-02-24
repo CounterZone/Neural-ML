@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.20)  17 FEB 2017 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.20)  17 FEB 2017 15:31
 entering extended mode
-**./L7.2_Sample-parameter-table_502.tex
-(L7.2_Sample-parameter-table_502.tex
+**./hw4p2_p4.tex
+(hw4p2_p4.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -176,6 +176,105 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \sf@top=\skip49
 \sf@bottom=\skip50
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\diagbox\diagbox.sty"
+Package: diagbox 2016/12/28 v2.2 Making table heads with diagonal lines
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pict2e\pict2e.sty"
+Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pict2e\pict2e.cfg"
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pict2e\p2e-pdftex.def"
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks22
+\@arclen=\dimen137
+\@arcrad=\dimen138
+\@tempdimd=\dimen139
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp.sty"
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
+Package: defpattern 1994/10/12
+\actioncount=\count112
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
+Package: fp-basic 1996/05/13
+\FP@xs=\count113
+\FP@xia=\count114
+\FP@xib=\count115
+\FP@xfa=\count116
+\FP@xfb=\count117
+\FP@rega=\count118
+\FP@regb=\count119
+\FP@regs=\count120
+\FP@times=\count121
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
+Package: fp-addons 1995/03/15
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
+Package: fp-snap 1995/04/05
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
+Package: fp-exp 1995/04/03
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
+Package: fp-trigo 1995/04/14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
+Package: fp-pas 1994/08/29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
+Package: fp-random 1995/02/23
+\FPseed=\count122
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
+Package: fp-eqn 1995/04/03
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
+Package: fp-upn 1996/10/21
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
+Package: fp-eval 1995/04/03
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count123
+\calc@Bcount=\count124
+\calc@Adimen=\dimen140
+\calc@Bdimen=\dimen141
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count125
+\calc@Cskip=\skip53
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen142
+\extrarowheight=\dimen143
+\NC@list=\toks23
+\extratabsurround=\skip54
+\backup@length=\skip55
+)
+\diagbox@boxa=\box28
+\diagbox@boxb=\box29
+\diagbox@boxm=\box30
+\diagbox@wd=\dimen144
+\diagbox@ht=\dimen145
+\diagbox@insepl=\dimen146
+\diagbox@insepr=\dimen147
+\diagbox@outsepl=\dimen148
+\diagbox@outsepr=\dimen149
+)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
@@ -191,8 +290,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count112
-\U@D=\dimen137
+\babel@savecnt=\count126
+\U@D=\dimen150
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -200,45 +299,44 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count113
-\float@exts=\toks22
-\float@box=\box28
-\@float@everytoks=\toks23
-\@floatcapt=\box29
+\c@float@type=\count127
+\float@exts=\toks24
+\float@box=\box31
+\@float@everytoks=\toks25
+\@floatcapt=\box32
 )
 
 LaTeX Warning: Unused global option(s):
     [epsfig].
 
-(L7.2_Sample-parameter-table_502.aux)
-\openout1 = `L7.2_Sample-parameter-table_502.aux'.
+(hw4p2_p4.aux)
+\openout1 = `hw4p2_p4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
-\scratchdimen=\dimen138
-\scratchbox=\box30
-\nofMPsegments=\count115
-\nofMParguments=\count116
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count117
-\MPscratchDim=\dimen139
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count128
+\scratchdimen=\dimen151
+\scratchbox=\box33
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen152
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks27
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -289,34 +387,115 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 73.
+Underfull \hbox (badness 1642) in paragraph at lines 78--78
+[]|\OT1/cmr/m/n/10 Monitoring fre-quency of
+ []
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-(L7.2_Sample-parameter-table_502.aux) ) 
+<PE5.png, id=12, 562.1pt x 421.575pt>
+File: PE5.png Graphic file (type png)
+ <use PE5.png>
+Package pdftex.def Info: PE5.png used on input line 117.
+(pdftex.def)             Requested size: 325.215pt x 243.90898pt.
+
+<errhistory.png, id=13, 1243.64626pt x 655.44875pt>
+File: errhistory.png Graphic file (type png)
+ <use errhistory.png>
+Package pdftex.def Info: errhistory.png used on input line 124.
+(pdftex.def)             Requested size: 469.75499pt x 247.5729pt.
+
+[2
+
+ <./PE5.png (PNG copy)>] [3 <./errhistory.png (PNG copy)>]
+<momentum_output.png, id=20, 979.66pt x 493.845pt>
+File: momentum_output.png Graphic file (type png)
+ <use momentum_output.png>
+Package pdftex.def Info: momentum_output.png used on input line 162.
+(pdftex.def)             Requested size: 469.75499pt x 236.80176pt.
+
+<momentum_error.png, id=21, 1208.515pt x 643.40375pt>
+File: momentum_error.png Graphic file (type png)
+ <use momentum_error.png>
+Package pdftex.def Info: momentum_error.png used on input line 168.
+(pdftex.def)             Requested size: 469.75499pt x 250.09196pt.
+
+[4
+
+ <./momentum_output.png (PNG copy)>] [5 <./momentum_error.png (PNG copy)>]
+<best_output.png, id=28, 562.1pt x 421.575pt>
+File: best_output.png Graphic file (type png)
+ <use best_output.png>
+Package pdftex.def Info: best_output.png used on input line 211.
+(pdftex.def)             Requested size: 433.62pt x 325.21199pt.
+
+<best_err.png, id=29, 562.1pt x 421.575pt>
+File: best_err.png Graphic file (type png)
+ <use best_err.png>
+Package pdftex.def Info: best_err.png used on input line 216.
+(pdftex.def)             Requested size: 469.75499pt x 352.31299pt.
+ [6
+
+ <./best_output.png (PNG copy)>] [7 <./best_err.png (PNG copy)>]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 258.
+
+<p41.png, id=37, 529.22719pt x 400.49625pt>
+File: p41.png Graphic file (type png)
+ <use p41.png>
+Package pdftex.def Info: p41.png used on input line 261.
+(pdftex.def)             Requested size: 289.07999pt x 218.76418pt.
+
+<p42.png, id=38, 620.3175pt x 458.46281pt>
+File: p42.png Graphic file (type png)
+ <use p42.png>
+Package pdftex.def Info: p42.png used on input line 262.
+(pdftex.def)             Requested size: 289.07999pt x 213.6517pt.
+ [8
+
+ <./p41.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+[9 <./p42.png (PNG copy)>] [10] (hw4p2_p4.aux) ) 
 Here is how much of TeX's memory you used:
- 3863 strings out of 493333
- 57118 string characters out of 3139194
- 135481 words of memory out of 3000000
- 7359 multiletter control sequences out of 15000+200000
+ 4895 strings out of 493333
+ 69204 string characters out of 3139194
+ 167885 words of memory out of 3000000
+ 8327 multiletter control sequences out of 15000+200000
  4755 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,13n,42p,280b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on L7.2_Sample-parameter-table_502.pdf (1 page, 97169 bytes).
+ 44i,15n,42p,599b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on hw4p2_p4.pdf (10 pages, 215744 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
