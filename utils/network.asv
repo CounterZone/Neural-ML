@@ -13,34 +13,30 @@ classdef network<handle
         i=0;
         while(1)
            l=fgetl(c);
+           i=i+1;
            if l==-1
                break
            end
-                      i=i+1;
-
-           l=regexp(l,',','split');
+           l=strsplit(l,',');
            if strcmp(l{1},'FClayer')
-               l=regexp(l{2},'x','split');
+               l=strsplit(l{2},'x');
                
                nw.layer{i}=FClayer(str2num(l{1}),str2num(l{2}));  %#ok<ST2NM>
-               nw.layer{i}.initiate(1/sqrt(str2num(l{1})));
            end
            if strcmp(l{1},'Tanhlayer')
                nw.layer{i}=Tanhlayer();
            end
            if strcmp(l{1},'Biaslayer')
-               nw.layer{i}=Biaslayer();
+               nw.layer=Biaslayer();
            end    
            
         end
-        nw.nlayer=i;
         end
 
-        function [err,dw]=S_train(nw,X,Y,momentum,lastdw,lr)
+        function err=S_train(nw,X,Y,momentum,lastdw,lr)
             yy=cell(1,nw.nlayer+1);
             yy{1}=X;
             for i=1:nw.nlayer
-                
                 yy{i+1}=nw.layer{i}.forward(yy{i});
             end 
             err=sqrt(mean((Y-yy{nw.nlayer+1}).^2));
@@ -50,27 +46,21 @@ classdef network<handle
             dw=cell(1,nw.nlayer);
              for i=1:nw.nlayer
                  if nw.layer{i}.updating
-                    [delta{i+1},dw{nw.nlayer-i+1}]=nw.layer{nw.nlayer-i+1}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});
+                    [delta{i+1},dw{nw.nlayer-i+1}]=nw.layer{i}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});
                  else
-                    delta{i+1}=nw.layer{nw.nlayer-i+1}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});
+                    delta{i+1}=nw.layer{i}.BP(delta{i},yy{nw.nlayer-i+2},yy{nw.nlayer-i+1});
                  end
              end
              for i=1:nw.nlayer
                   if nw.layer{i}.updating
-                      dw{i}=dw{i}+momentum.*lastdw{i};
-                  nw.layer{i}.update(dw{i},lr);
+                  nw.layer{i}.update(dw{i}+momentum.*lastdw,lr);
                   end
              end 
         end
-        function err_his=train(nw,X,Y,momentum,lr,epoch)
-            lastdw=cell(1,nw.nlayer);
-            for i=1:nw.nlayer               
-                lastdw{i}=0;
-            end 
+        function err_his=train(nw,X,Y,momentum,lastdw,lr,epoch)
            err_his=ones(1,epoch);
             for i=1:epoch
-            [err_his(i),dw]=nw.S_train(X,Y,momentum,lastdw,lr);
-            lastdw=dw;
+            err_his(i)=nw.S_train(X,Y,momentum,lastdw,lr);
            end
         end
         

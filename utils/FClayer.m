@@ -28,6 +28,9 @@ classdef FClayer <layer
             out=nlayer.weight*input;
         end
         function [delta,dw]=BP(nlayer,updelta,upy,downy)
+            %upy:output of this layer
+            %downy:input of this layer
+            
             %backpropagation. 
             %updelta: delta of the next layer
             %upy downy: output and input of this layer
