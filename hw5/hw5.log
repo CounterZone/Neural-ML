@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.14)  24 FEB 2017 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.14)  24 FEB 2017 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -385,149 +385,149 @@ Package caption Info: End \AtBeginDocument code.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 62.
+(amsmath)                 on input line 75.
 
 <Acc_1.png, id=1, 578.16pt x 433.62pt>
 File: Acc_1.png Graphic file (type png)
  <use Acc_1.png>
-Package pdftex.def Info: Acc_1.png used on input line 73.
+Package pdftex.def Info: Acc_1.png used on input line 86.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 73--74
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
 <Acc_2.png, id=2, 578.16pt x 433.62pt>
 File: Acc_2.png Graphic file (type png)
  <use Acc_2.png>
-Package pdftex.def Info: Acc_2.png used on input line 79.
+Package pdftex.def Info: Acc_2.png used on input line 92.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 79--80
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 92--93
  [][] 
  []
 
 <Acc_3.png, id=3, 578.16pt x 433.62pt>
 File: Acc_3.png Graphic file (type png)
  <use Acc_3.png>
-Package pdftex.def Info: Acc_3.png used on input line 85.
+Package pdftex.def Info: Acc_3.png used on input line 98.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 85--86
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 98--99
  [][] 
  []
 
 <RMSE_1.png, id=4, 578.16pt x 433.62pt>
 File: RMSE_1.png Graphic file (type png)
  <use RMSE_1.png>
-Package pdftex.def Info: RMSE_1.png used on input line 95.
+Package pdftex.def Info: RMSE_1.png used on input line 108.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 95--96
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 108--109
  [][] 
  []
 
 <RMSE_2.png, id=5, 578.16pt x 433.62pt>
 File: RMSE_2.png Graphic file (type png)
  <use RMSE_2.png>
-Package pdftex.def Info: RMSE_2.png used on input line 101.
+Package pdftex.def Info: RMSE_2.png used on input line 114.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 101--102
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
 <RMSE_3.png, id=6, 578.16pt x 433.62pt>
 File: RMSE_3.png Graphic file (type png)
  <use RMSE_3.png>
-Package pdftex.def Info: RMSE_3.png used on input line 107.
+Package pdftex.def Info: RMSE_3.png used on input line 120.
 (pdftex.def)             Requested size: 158.99377pt x 119.24255pt.
 
-Overfull \hbox (13.72968pt too wide) in paragraph at lines 107--108
+Overfull \hbox (13.72968pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./Acc_1.png (PNG copy)> <./Acc_2.png (PNG copy)> <./Acc_3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 [2 <./RMSE_1.png (PNG copy)> <./RMSE_2.png (PNG copy)> <./RMSE_3.png (PNG copy)
 >]
-Underfull \hbox (badness 1642) in paragraph at lines 205--205
+Underfull \hbox (badness 1642) in paragraph at lines 218--218
 []|\OT1/cmr/m/n/10 Monitoring fre-quency of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+Underfull \hbox (badness 10000) in paragraph at lines 222--225
 
  []
 
 [3] <MSEhistory_1.png, id=26, 578.16pt x 434.1018pt>
 File: MSEhistory_1.png Graphic file (type png)
  <use MSEhistory_1.png>
-Package pdftex.def Info: MSEhistory_1.png used on input line 224.
+Package pdftex.def Info: MSEhistory_1.png used on input line 237.
 (pdftex.def)             Requested size: 289.07999pt x 217.05037pt.
 
 <TrainvsDesire_1.png, id=27, 578.16pt x 434.1018pt>
 File: TrainvsDesire_1.png Graphic file (type png)
  <use TrainvsDesire_1.png>
-Package pdftex.def Info: TrainvsDesire_1.png used on input line 230.
+Package pdftex.def Info: TrainvsDesire_1.png used on input line 243.
 (pdftex.def)             Requested size: 289.07999pt x 217.05037pt.
 
 [4 <./MSEhistory_1.png (PNG copy)> <./TrainvsDesire_1.png (PNG copy)>]
 <errPE.png, id=31, 1105.12875pt x 607.26875pt>
 File: errPE.png Graphic file (type png)
  <use errPE.png>
-Package pdftex.def Info: errPE.png used on input line 245.
+Package pdftex.def Info: errPE.png used on input line 258.
 (pdftex.def)             Requested size: 469.75499pt x 258.1275pt.
 
 <lr_err1.png, id=32, 562.1pt x 421.575pt>
 File: lr_err1.png Graphic file (type png)
  <use lr_err1.png>
-Package pdftex.def Info: lr_err1.png used on input line 259.
+Package pdftex.def Info: lr_err1.png used on input line 272.
 (pdftex.def)             Requested size: 325.215pt x 243.90898pt.
  [5 <./errPE.png (PNG copy)>] <lr_err2.png, id=36, 562.1pt x 421.575pt>
 File: lr_err2.png Graphic file (type png)
  <use lr_err2.png>
-Package pdftex.def Info: lr_err2.png used on input line 269.
+Package pdftex.def Info: lr_err2.png used on input line 282.
 (pdftex.def)             Requested size: 325.215pt x 243.90898pt.
  [6 <./lr_err1.png (PNG copy)> <./lr_err2.png (PNG copy)>]
 <err_test1.png, id=40, 578.16pt x 434.1018pt>
 File: err_test1.png Graphic file (type png)
  <use err_test1.png>
-Package pdftex.def Info: err_test1.png used on input line 288.
+Package pdftex.def Info: err_test1.png used on input line 301.
 (pdftex.def)             Requested size: 325.215pt x 244.18167pt.
 
 <output_test1.png, id=41, 578.16pt x 434.1018pt>
 File: output_test1.png Graphic file (type png)
  <use output_test1.png>
-Package pdftex.def Info: output_test1.png used on input line 294.
+Package pdftex.def Info: output_test1.png used on input line 307.
 (pdftex.def)             Requested size: 325.215pt x 244.18167pt.
 
 [7 <./err_test1.png (PNG copy)> <./output_test1.png (PNG copy)>]
 <err_test2.png, id=46, 578.16pt x 434.1018pt>
 File: err_test2.png Graphic file (type png)
  <use err_test2.png>
-Package pdftex.def Info: err_test2.png used on input line 314.
+Package pdftex.def Info: err_test2.png used on input line 327.
 (pdftex.def)             Requested size: 325.215pt x 244.18167pt.
 
 <output_test2.png, id=47, 578.16pt x 434.1018pt>
 File: output_test2.png Graphic file (type png)
  <use output_test2.png>
-Package pdftex.def Info: output_test2.png used on input line 320.
+Package pdftex.def Info: output_test2.png used on input line 333.
 (pdftex.def)             Requested size: 325.215pt x 244.18167pt.
 
 [8 <./err_test2.png (PNG copy)> <./output_test2.png (PNG copy)>] (./hw5.aux) ) 
@@ -548,7 +548,7 @@ ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
 texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on hw5.pdf (8 pages, 406601 bytes).
+Output written on hw5.pdf (8 pages, 407789 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
